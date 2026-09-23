@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberLobby — tienda de videojuegos</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ==================== CABECERA ==================== -->
+  <header class="cabecera">
+    <h1 id="titulo">CyberLobby</h1>
+    <p id="subtitulo">Tu tienda de videojuegos digitales</p>
+
+    <nav class="menu">
+      <a href="#inicio" class="enlace">Inicio</a>
+      <a href="#coleccion" class="enlace">Catálogo</a>
+      <a href="#contacto" class="enlace">Contacto</a>
+    </nav>
+
+    <button id="btnTema" class="boton-tema">Modo oscuro</button>
+  </header>
+
+  <main>
+
+    <!-- ==================== INICIO ==================== -->
+    <section id="inicio" class="bloque">
+      <h2>Quiénes somos</h2>
+
+      <p id="parrafoInicio">
+        En CyberLobby vendemos claves digitales de videojuegos para PC y
+        consola, a precios justos y con entrega inmediata.
+      </p>
+
+      <div id="caja" class="caja">
+        <p class="caja-texto">Oferta del dia</p>
+      </div>
+
+      <div class="acciones">
+        <button id="btnColor" class="boton">Cambiar color</button>
+        <button id="btnDestacar" class="boton">Destacar</button>
+        <button id="btnOcultar" class="boton">Ocultar / mostrar</button>
+      </div>
+
+      <p>
+        Más información en
+        <a id="enlaceExterno" href="#" class="enlace-externo">este enlace</a>.
+      </p>
+    </section>
+
+    <!-- ==================== COLECCIÓN ==================== -->
+    <section id="coleccion" class="bloque">
+      <h2>Nuestro catálogo</h2>
+
+      <ul id="lista" class="lista">
+        <li>Halo Campaign Evolved - Shooter</li>
+        <li>Hollow Knight - Indie</li>
+        <li>Need For Speed Most Wanted - Racing</li>
+      </ul>
+
+      <p id="contador" class="contador">—</p>
+
+      <div class="acciones">
+        <input type="text" id="campoProyecto" placeholder="Nombre del proyecto">
+        <button id="btnAgregar" class="boton">Agregar</button>
+        <button id="btnQuitar" class="boton secundario">Quitar el último</button>
+        <button id="btnVaciar" class="boton peligro">Vaciar</button>
+      </div>
+
+      <table id="tabla" class="tabla">
+        <thead>
+          <tr>
+            <th>Juego</th>
+            <th>Género</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Halo Campaign Evolved</td>
+            <td>Shooter</td>
+            <td>$199.900</td>
+          </tr>
+          <tr>
+            <td>Hollow Knight</td>
+            <td>Indie</td>
+            <td>$20.000</td>
+          </tr>
+          <tr>
+            <td>Need For Speed Most Wanted</td>
+            <td>Racing</td>
+            <td>$30.000</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ==================== CONTACTO ==================== -->
+    <section id="contacto" class="bloque">
+      <h2>Escríbanos</h2>
+
+      <form id="formulario" class="formulario">
+
+        <label for="campoNombre">Su nombre</label>
+        <input type="text" id="campoNombre" placeholder="Nombre completo">
+
+        <label for="campoMensaje">Mensaje</label>
+        <textarea id="campoMensaje" rows="3" placeholder="Cuéntenos en qué podemos ayudar"></textarea>
+        <p id="contadorLetras" class="ayuda">...</p>
+
+        <button type="submit" id="btnEnviar" class="boton">Enviar</button>
+      </form>
+
+      <p id="avisoForm" class="aviso"></p>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p>CyberLobby — Ficha 3230489 — <span id="anio"></span></p>
+  </footer>
+
+</body>
+</html>
