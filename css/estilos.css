@@ -24,9 +24,9 @@
 
 @font-face {
   font-family: 'Lower Pixel';
-  src: url(font/LowresPixel-Regular.otf) format('opentype');
+  src: url('../font/LowresPixel-Regular.otf') format('opentype');
   font-weight: normal;
-  font-size: normal;
+  font-style: normal;
 }
 
 h1, h2, h3 {
@@ -65,7 +65,7 @@ main {
   text-align: center;
   border-radius: 0px 0px 80px 80px;
   margin: 0 20px;
-  box-shadow: 10px 12px 0px #7c3aed;
+  box-shadow:  0 10px 12px 0 #7c3aed;
 }
 
 .cabecera h1 {
@@ -90,7 +90,7 @@ main {
 .enlace {
   color: #ffffff;
   text-decoration: none;
-  font-size: .92rem;
+  font-size: 20px;
   padding-bottom: 2px;
   border-bottom: 2px solid transparent;
 }
