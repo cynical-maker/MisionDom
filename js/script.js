@@ -19,7 +19,10 @@ const btnAgregar = document.getElementById("btnAgregar");
 const btnQuitar = document.getElementById("btnQuitar");
 const btnVaciar = document.getElementById("btnVaciar");
 const filas = document.querySelectorAll("#tabla tbody tr");
-
+const anio = document.getElementById("anio");
+const titulo = document.getElementById("titulo");
+const subtitulo = document.getElementById("subtitulo");
+const enlaceExterno = document.getElementById("enlaceExterno");
 
 /* ---------- 2. ESTADO ---------- */
 /* Los datos que la página recuerda entre un clic y otro.  */
@@ -28,8 +31,9 @@ const filas = document.querySelectorAll("#tabla tbody tr");
 
 
 /* ---------- 3. FUNCIONES ---------- */
-/* Lo que la página sabe hacer.                            */
-// Misión 4: cuenta los <li> de la lista y escribe el resultado
+// Lo que la página sabe hacer.  
+
+// Misión 4: 
 
 function actualizarContador() {
   const cantidad = lista.querySelectorAll("li").length;
@@ -115,8 +119,19 @@ filas.forEach(function (fila) {
 
 /* ---------- 5. ARRANQUE ---------- */
 /* Lo que pasa apenas carga la página. */   
-actualizarContador();    
+actualizarContador(); 
 
+// Misión 1.
+const hoy = new Date();
+const anioActual = hoy.getFullYear(); 
+anio.textContent = anioActual;
 
+// Misión 2.
+titulo.textContent = "CyberLobby";   
+subtitulo.textContent = "Tu tienda de videojuegos digitales - " + anioActual;
 
-document.getElementById("Anio").textContent = new Date();
+// Misión 3.
+enlaceExterno.setAttribute("href", "https://store.steampowered.com/app/4232620/BUNNY_GARDEN_2__Rins_Karaoke_Song_So_naive_lol/");
+enlaceExterno.setAttribute("target", "_blank");
+enlaceExterno.setAttribute("rel", "noopener");
+enlaceExterno.textContent = "visita nuestra página";
