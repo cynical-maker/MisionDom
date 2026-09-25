@@ -18,17 +18,26 @@ const campoProyecto = document.getElementById("campoProyecto");
 const btnAgregar = document.getElementById("btnAgregar");
 const btnQuitar = document.getElementById("btnQuitar");
 const btnVaciar = document.getElementById("btnVaciar");
+const btnDestacar = document.getElementById("btnDestacar");
+const btnOcultar = document.getElementById("btnOcultar");
+const btnColor = document.getElementById("btnColor");
+const btnTema = document.getElementById("btnTema");
+const caja = document.getElementById("caja");
 const filas = document.querySelectorAll("#tabla tbody tr");
+const filasTabla = document.querySelectorAll("#tabla tbody tr");
 const anio = document.getElementById("anio");
 const titulo = document.getElementById("titulo");
 const subtitulo = document.getElementById("subtitulo");
 const enlaceExterno = document.getElementById("enlaceExterno");
+const campoMensaje = document.getElementById("campoMensaje");
+const contadorLetras = document.getElementById("contadorLetras");
+
 
 /* ---------- 2. ESTADO ---------- */
 /* Los datos que la página recuerda entre un clic y otro.  */
 
-
-
+const colores = ["#7c3aed", "#f59e0b", "#16a34a", "#dc2626", "#1a1330"];
+let indiceColor = 0;
 
 /* ---------- 3. FUNCIONES ---------- */
 // Lo que la página sabe hacer.  
@@ -84,12 +93,17 @@ function vaciarLista() {
 }
 
 // Misión 12:
-function marcarFila(filaClicada) {
-  filas.forEach(function (fila) {
-    fila.classList.remove("fila-marcada"); // 1. limpia todas
+
+
+filas.forEach(function (fila) {
+  fila.addEventListener("click", function () {
+    filas.forEach(function (otraFila) {
+      otraFila.classList.remove("fila-marcada");
+    });
+
+    fila.classList.add("fila-marcada");
   });
-  filaClicada.classList.add("fila-marcada"); // 2. marca solo la elegida
-}
+});
 
 
 /* ---------- 4. EVENTOS ---------- */
@@ -103,6 +117,41 @@ campoProyecto.addEventListener("keydown", function (evento) {
     agregarProyecto();
   }
 });
+//Modo oscuro
+btnTema.addEventListener('click', () => {
+  document.body.classList.toggle('noche'); });
+
+
+// Misión 5 — destacar la caja con un botón
+btnDestacar.addEventListener("click", () => {
+  caja.classList.toggle("destacada");
+});
+
+
+
+// Misión 6 — ocultar y mostrar la caja con un botón
+btnOcultar.addEventListener("click", () => {
+  caja.classList.toggle("oculto");
+  btnOcultar.textContent = caja.classList.contains("oculto") ? "Mostrar" : "Ocultar";
+});
+
+
+// Misión 7 — cambiar de color en secuencia
+btnColor.addEventListener("click", () => {
+  const colorActual = colores[indiceColor];
+  caja.style.backgroundColor = colorActual;
+
+  indiceColor++;
+
+  if (indiceColor >= colores.length) {
+    indiceColor = 0;
+  }
+});
+
+
+
+
+
 
 // Misión 10
 btnQuitar.addEventListener("click", quitarUltimo);
@@ -121,6 +170,12 @@ filas.forEach(function (fila) {
 /* Lo que pasa apenas carga la página. */   
 actualizarContador(); 
 
+filasTabla.forEach((fila, indice) => {
+  if (indice % 2 !== 0) {
+    fila.style.backgroundColor = "#f3e8ff";
+  }
+});
+
 // Misión 1.
 const hoy = new Date();
 const anioActual = hoy.getFullYear(); 
@@ -135,3 +190,12 @@ enlaceExterno.setAttribute("href", "https://store.steampowered.com/app/4232620/B
 enlaceExterno.setAttribute("target", "_blank");
 enlaceExterno.setAttribute("rel", "noopener");
 enlaceExterno.textContent = "visita nuestra página";
+
+// Contador de letras del mensaje
+const actualizarContadorLetras = () => {
+  const longitud = campoMensaje.value.length;
+  contadorLetras.textContent = longitud + " caracteres";
+};
+
+campoMensaje.addEventListener("input", actualizarContadorLetras);
+actualizarContadorLetras();

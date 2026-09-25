@@ -319,4 +319,82 @@ body.noche {
   --tinta: #ece8fa;
   --suave: #a79bcf;
   --borde: #362c54;
+  --acento: #9a6cff;
+  --alerta: #fbbf24;
+  --peligro: #f87171;
+  --exito: #4ade80;
+}
+
+body.noche {
+  background: var(--papel);
+  color: var(--tinta);
+}
+
+body.noche .cabecera {
+  box-shadow: 0 10px 0 rgba(154, 108, 255, 0.8);
+}
+
+body.noche .boton-tema {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+body.noche .boton {
+  background: #2a2240;
+  color: #f5f3ff;
+}
+
+body.noche .boton.secundario {
+  background: #1c1630;
+  color: var(--tinta);
+  border-color: var(--borde);
+}
+
+body.noche .boton.peligro {
+  background: #22182d;
+  color: var(--peligro);
+  border-color: var(--peligro);
+}
+
+body.noche input[type="text"],
+body.noche textarea {
+  background: #120e1f;
+  color: var(--tinta);
+  border-color: var(--borde);
+}
+
+body.noche .lista li {
+  background: #1b1431;
+  border-left-color: var(--acento);
+  color: var(--tinta);
+}
+
+body.noche .contador,
+body.noche .ayuda,
+body.noche .formulario label,
+body.noche .pie,
+body.noche #subtitulo {
+  color: var(--suave);
+}
+
+body.noche .enlace,
+body.noche .enlace:hover,
+body.noche .enlace:focus-visible {
+  color: #ffffff;
+}
+
+body.noche .fila-marcada {
+  background: rgba(154, 108, 255, 0.18);
+  color: var(--tinta);
+}
+
+body.noche .tabla td,
+body.noche .tabla th {
+  border-color: var(--borde);
+}
+
+body.noche .bloque,
+body.noche .cabecera {
+  border-color: rgba(255, 255, 255, 0.04);
 }
