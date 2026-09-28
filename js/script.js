@@ -189,7 +189,7 @@ subtitulo.textContent = "Tu tienda de videojuegos digitales - " + anioActual;
 enlaceExterno.setAttribute("href", "https://github.com/cynical-maker/MisionDom.git");
 enlaceExterno.setAttribute("target", "_blank");
 enlaceExterno.setAttribute("rel", "noopener");
-enlaceExterno.textContent = "visita nuestra página";
+enlaceExterno.textContent = "visita nuestro repositorio";
 
 // Contador de letras del mensaje
 const actualizarContadorLetras = () => {
