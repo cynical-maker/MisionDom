@@ -186,7 +186,7 @@ titulo.textContent = "CyberLobby";
 subtitulo.textContent = "Tu tienda de videojuegos digitales - " + anioActual;
 
 // Misión 3.
-enlaceExterno.setAttribute("href", "https://store.steampowered.com/app/4232620/BUNNY_GARDEN_2__Rins_Karaoke_Song_So_naive_lol/");
+enlaceExterno.setAttribute("href", "https://github.com/cynical-maker/MisionDom");
 enlaceExterno.setAttribute("target", "_blank");
 enlaceExterno.setAttribute("rel", "noopener");
 enlaceExterno.textContent = "visita nuestra página";
