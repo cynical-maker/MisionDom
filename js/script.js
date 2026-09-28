@@ -186,7 +186,7 @@ titulo.textContent = "CyberLobby";
 subtitulo.textContent = "Tu tienda de videojuegos digitales - " + anioActual;
 
 // Misión 3.
-enlaceExterno.setAttribute("href", "https://github.com/cynical-maker/MisionDom");
+enlaceExterno.setAttribute("href", "https://github.com/cynical-maker/MisionDom.git");
 enlaceExterno.setAttribute("target", "_blank");
 enlaceExterno.setAttribute("rel", "noopener");
 enlaceExterno.textContent = "visita nuestra página";
