@@ -65,7 +65,7 @@ main {
   text-align: center;
   border-radius: 0px 0px 80px 80px;
   margin: 0 20px;
-  box-shadow:  0 10px 12px 0 #7c3aed;
+  box-shadow:  0 10px 2px 0 #6b31cf;
 }
 
 .cabecera h1 {
@@ -331,7 +331,7 @@ body.noche {
 }
 
 body.noche .cabecera {
-  box-shadow: 0 10px 0 rgba(154, 108, 255, 0.8);
+  box-shadow: 0 10px 0 #6b31cf;
 }
 
 body.noche .boton-tema {
